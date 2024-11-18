@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Brain, Heart, Zap } from 'lucide-react';
+import { SocialShare } from '@/components/social-share';
 
 export default function About() {
   return (
@@ -73,6 +74,8 @@ export default function About() {
           </ul>
         </CardContent>
       </Card>
+
+      <SocialShare />
     </div>
   );
 }

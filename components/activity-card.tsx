@@ -9,14 +9,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from './ui/accordion';
+import { cn } from '@/lib/utils';
+import { CSSProperties } from 'react';
 
 interface ActivityCardProps {
   activity: Activity & { score: number };
+  className?: string;
+  style?: CSSProperties
 }
 
-export function ActivityCard({ activity }: ActivityCardProps) {
+export function ActivityCard({ activity, className, style }: ActivityCardProps) {
   return (
-    <Card className="overflow-hidden">
+    <Card className={cn(`overflow-hidden`, className)} style={style}>
       <CardHeader className="space-y-1">
         <div className="flex items-center justify-between">
           <CardTitle className="text-xl">{activity.name}</CardTitle>
