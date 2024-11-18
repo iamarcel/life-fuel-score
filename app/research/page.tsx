@@ -1,7 +1,9 @@
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { AlertTriangle, BookOpen, Brain, FlaskConical } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Research() {
   return (
@@ -16,9 +18,15 @@ export default function Research() {
       <Alert>
         <AlertTriangle className="h-4 w-4" />
         <AlertTitle>Prototype Stage</AlertTitle>
-        <AlertDescription>
+        <AlertDescription className="flex flex-col gap-4">
+          <p>
           The current Life Fuel Score system is a prototype designed to demonstrate the concept.
           The scoring algorithm and data are preliminary and will be refined based on scientific research.
+          </p>
+
+          <Link href="https://github.com/iamarcel/life-fuel-score" target="_blank">
+            <Button>Contribute on GitHub</Button>
+          </Link>
         </AlertDescription>
       </Alert>
 

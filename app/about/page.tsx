@@ -1,6 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Brain, Heart, Zap } from 'lucide-react';
+import { AlertTriangle, Brain, Heart, Zap } from 'lucide-react';
 import { SocialShare } from '@/components/social-share';
+import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -11,6 +14,21 @@ export default function About() {
           Understanding and optimizing our daily activities for better mental well-being
         </p>
       </div>
+
+      <Alert>
+        <AlertTriangle className="h-4 w-4" />
+        <AlertTitle>Prototype Stage</AlertTitle>
+        <AlertDescription className="flex flex-col gap-4">
+          <p>
+          The current Life Fuel Score system is a prototype designed to demonstrate the concept.
+          The scoring algorithm and data are preliminary and will be refined based on scientific research.
+          </p>
+
+          <Link href="https://github.com/iamarcel/life-fuel-score" target="_blank">
+            <Button>Contribute on GitHub</Button>
+          </Link>
+        </AlertDescription>
+      </Alert>
 
       <div className="grid gap-6 md:grid-cols-3">
         <Card>
